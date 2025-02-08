@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepSync - Automatic Step Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>StepSync</h1>
+            <div class="permission-status" id="permissionStatus">
+                Motion Permission: Not Granted
+            </div>
+        </header>
+
+        <main>
+            <section class="step-tracker">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Steps</h3>
+                        <span id="stepCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Distance</h3>
+                        <span id="distanceCount">0.00 km</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Calories</h3>
+                        <span id="caloriesBurned">0</span>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <h2>Daily Progress</h2>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        Goal Progress: <span id="progressText">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="settings">
+                <h2>Settings</h2>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label for="dailyGoal">Daily Step Goal</label>
+                        <input type="number" id="dailyGoal" placeholder="10000">
+                        <button id="setGoalBtn">Set Goal</button>
+                    </div>
+                    <div class="setting-item">
+                        <label for="userWeight">Your Weight (kg)</label>
+                        <input type="number" id="userWeight" placeholder="70">
+                        <button id="setWeightBtn">Update</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="activity-log">
+                <h2>Today's Activity</h2>
+                <ul id="activityLog"></ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 StepSync - Automatic Step Tracker</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
